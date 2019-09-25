@@ -1,8 +1,11 @@
 import logging
+from flask import Flask, request
+import os
 
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 from telegram.ext import Updater
+server = Flask(__name__)
 
 import bot_settings
 
@@ -38,3 +41,7 @@ dispatcher.add_handler(echo_handler)
 
 logger.info("Start polling")
 updater.start_polling()
+
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    
