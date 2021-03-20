@@ -6,7 +6,7 @@ future==0.17.1
 ipykernel==5.1.0
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jsonschema==2.6.0
 MarkupSafe==1.1.0
 pandocfilters==1.4.2
